@@ -9,6 +9,6 @@ import (
 
 func main() {
 	app.Run("radio", func(w *unison.Window) {
-		radio.New().Layout(w.Content())
+		w.Content().AddChild(radio.New().Layout())
 	})
 }
